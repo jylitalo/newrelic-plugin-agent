@@ -9,6 +9,7 @@ available = {
     'edgecast': 'newrelic_plugin_agent.plugins.edgecast.Edgecast',
     'elasticsearch':
         'newrelic_plugin_agent.plugins.elasticsearch.ElasticSearch',
+    'filesize': 'newrelic_plugin_agent.plugins.filesize.Filesize',
     'haproxy': 'newrelic_plugin_agent.plugins.haproxy.HAProxy',
     'memcached': 'newrelic_plugin_agent.plugins.memcached.Memcached',
     'mongodb': 'newrelic_plugin_agent.plugins.mongodb.MongoDB',

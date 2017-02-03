@@ -8,6 +8,7 @@ NewRelic platform. Currently supported backend systems are:
 - Apache HTTP Server
 - CouchDB
 - Elasticsearch
+- Filesize
 - HAProxy
 - Memcached
 - MongoDB
@@ -142,6 +143,17 @@ The agent requires the extended information to parse metrics. If you are not see
 
 If you are monitoring Apache HTTPd via a HTTPS connection you can use the ``verify_ssl_cert`` configuration value in the httpd configuration section to disable SSL certificate verification.
 
+Filesize Installation Notes
+---------------------------
+
+The filesize plugin can monitor size of listed files. Useful in scenarios, where file gets created as error indicator.
+
+::
+
+    filenames:
+      - /etc/passwd
+      - /var/log/syslog
+
 Memcached Installation Notes
 ----------------------------
 The memcached plugin can communicate either over UNIX domain sockets using the path configuration variable or TCP/IP using the host and port variables. Do not include both.
@@ -254,7 +266,7 @@ UWSGI Installation Notes
 ------------------------
 The UWSGI plugin can communicate either over UNIX domain sockets using the path configuration variable or TCP/IP using the host and port variables. Do not include both.
 
-Make sure you have `enabled stats server 
+Make sure you have `enabled stats server
 <http://uwsgi-docs.readthedocs.org/en/latest/StatsServer.html>`_ in your uwsgi config.
 
 Configuration Example
